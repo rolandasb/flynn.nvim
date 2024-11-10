@@ -3,10 +3,11 @@ local palette = require("lipoide.palette")
 local highlight = {
   Normal = { fg = palette.fg, bg = palette.bg },
   NormalFloat = { fg = palette.fg, bg = palette.gutter_bg },
-  Visual = { bg = palette.menu },
+  Visual = { fg = palette.visual_fg, bg = palette.visual_bg },
   VisualNOS = { bg = palette.menu },
   FloatBorder = { fg = palette.comment },
   EndOfBuffer = { fg = palette.comment },
+  Statusline = { bg = palette.status_bg },
 
   String = { fg = palette.agreen },
   Number = { fg = palette.agreen },
@@ -35,16 +36,16 @@ local highlight = {
   Pmenu = { fg = palette.fg, bg = palette.menu },
 
   -- Treesitter
-  ['@method'] = { fg = palette.blue },
-  ['@character'] = { fg = palette.agreen },
-  ['@type.qualifier'] = { fg = palette.green },
-  ['@keyword.function'] = { fg = palette.green },
-  ['@Function.builtin'] = { fg = palette.blue },
-  ['@variable.builtin'] = { fg = palette.green },
-  ['@constructor'] = { fg = palette.blue },
-  ['@constructor.lua'] = { fg = palette.green },
-  ['@punctuation.delimiter'] = { fg = palette.green },
-  ['@punctuation.bracket'] = { fg = palette.green },
+  ["@method"] = { fg = palette.blue },
+  ["@character"] = { fg = palette.agreen },
+  ["@type.qualifier"] = { fg = palette.green },
+  ["@keyword.function"] = { fg = palette.green },
+  ["@Function.builtin"] = { fg = palette.blue },
+  ["@variable.builtin"] = { fg = palette.green },
+  ["@constructor"] = { fg = palette.blue },
+  ["@constructor.lua"] = { fg = palette.green },
+  ["@punctuation.delimiter"] = { fg = palette.green },
+  ["@punctuation.bracket"] = { fg = palette.green },
 
   -- LSP
   DiagnosticError = { fg = palette.red, bg = palette.gutter_bg },
@@ -76,11 +77,11 @@ local highlight = {
   NetrwDir = { fg = palette.green },
 
   -- Lazy
-  LazyButton = { fg = palette.fg , bg = palette.gutter_bg },
+  LazyButton = { fg = palette.fg, bg = palette.gutter_bg },
 
   -- IndentMini
   IndentLine = { fg = palette.comment },
-  IndentLineCurrent = { fg = palette.comment }
+  IndentLineCurrent = { fg = palette.comment },
 }
 
 return highlight
