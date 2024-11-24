@@ -1,17 +1,16 @@
-# 👽 lipoide.nvim
-![image](https://github.com/FelipeIzolan/lipoide.nvim/assets/80170121/379236a5-184a-44e0-9b21-103d2eb69c58)
+# flynn.nvim
 
 ## 🚀 Installation && Usage
 
 ```lua
 -- lazy.nvim
-{ 'FelipeIzolan/lipoide.nvim' }
+{ 'rolandasb/flynn.nvim' }
 -- or
 { 
-  'FelipeIzolan/lipoide.nvim',
+  'rolandasb/flynn.nvim',
   dependencies = { 'nvim-treesitter/nvim-treesitter' },
   config = function()
-    require("lipoide").setup({
+    require("flynn").setup({
       transparent = false, -- boolean
       transparent_column = false, -- boolean
       comment_italic = false -- boolean
@@ -31,12 +30,9 @@ lsp[$server].setup({ ..., on_attach = on_attach})
 ```
 
 ```lua
-colorscheme lipoide
-vim.cmd("colorscheme lipoide")
+colorscheme flynn
+vim.cmd("colorscheme flynn")
 ```
-
-# 🍭 Colors
-![image](https://github.com/FelipeIzolan/lipoide.nvim/assets/80170121/94e1ae9a-d389-4e49-9888-a759abd99b0b)
 
 ## 🔗 Compatibility
 
